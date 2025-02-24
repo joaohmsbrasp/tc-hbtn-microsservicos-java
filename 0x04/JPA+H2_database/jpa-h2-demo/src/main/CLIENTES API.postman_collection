@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "212f6c65-dfd9-41dd-951a-ad040096a845",
+		"name": "CLIENTES API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ADD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\" : \"Danilo Pereira\",\r\n    \"idade\" :  38,\r\n    \"email\" : \"danilo.pereira84@gmail.com\",\r\n    \"telefones\" : [\r\n        {\r\n          \"DDD\" : \"019\",\r\n          \"numero\" : \"1234567\"\r\n        }, \r\n        {\r\n          \"DDD\" : \"011\",\r\n          \"numero\" : \"44444444\"\r\n        }\r\n    ],\r\n    \"enderecos\" : [\r\n        {\r\n            \"logradouro\" : \"Rua\",\r\n            \"endereco\" : \"xxxxx\",\r\n            \"numero\" : \"12364\",\r\n            \"bairro\" : \"Centro\",\r\n            \"cidade\" : \"Limeira\",\r\n            \"estado\" : \"SP\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api-jpa-h2/addCliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-jpa-h2",
+						"addCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND_ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api-jpa-h2/findAllClientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-jpa-h2",
+						"findAllClientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND_BY_ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api-jpa-h2/findClientById/?idClient=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-jpa-h2",
+						"findClientById",
+						""
+					],
+					"query": [
+						{
+							"key": "idClient",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_BY_ID",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
